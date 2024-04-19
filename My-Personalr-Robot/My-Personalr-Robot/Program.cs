@@ -24,7 +24,10 @@ namespace My_Personal_Robot
         }
 
         private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
-        
-        
+
+        private static void InputUserOperation()
+        {
+
+        }
     }
 }
