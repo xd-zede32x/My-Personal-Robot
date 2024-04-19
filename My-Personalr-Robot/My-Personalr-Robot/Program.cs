@@ -4,10 +4,7 @@ namespace My_Personal_Robot
 {
     public class Program
     {
-        private static void Main(string[] _)
-        {
-            UserGreeting();
-        }
+        private static void Main(string[] _) => UserGreeting();
 
         private static void UserGreeting()
         {
@@ -27,5 +24,7 @@ namespace My_Personal_Robot
         }
 
         private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
+        
+        
     }
 }
