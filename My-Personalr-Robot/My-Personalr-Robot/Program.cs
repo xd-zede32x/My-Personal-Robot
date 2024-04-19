@@ -9,6 +9,7 @@ namespace My_Personal_Robot
         private static void UserGreeting()
         {
             Console.Title = "Альбедо";
+
             ChangeConsoleColor(ConsoleColor.Yellow);
 
             Console.WriteLine("Приветствую вас мой господин это говорит ваша Альбедо.");
@@ -25,9 +26,11 @@ namespace My_Personal_Robot
 
         private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
 
-        private static void InputUserOperation()
+        private static void InputUserOperation(string userName)
         {
-
+            Console.WriteLine($"{userName} выберете операцию которую хотите использовать: ");
+            
+            int inputOperations = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
