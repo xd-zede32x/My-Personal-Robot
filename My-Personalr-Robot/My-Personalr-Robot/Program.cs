@@ -22,6 +22,8 @@ namespace My_Personal_Robot
         {
             string userName = Console.ReadLine();
             Console.WriteLine($"\nХорошо я буду вас называть {userName} если вы не против (-- --)");
+
+            InputUserOperation(userName);
         }
 
         private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
@@ -31,6 +33,33 @@ namespace My_Personal_Robot
             Console.WriteLine($"{userName} выберете операцию которую хотите использовать: ");
             
             int inputOperations = Convert.ToInt32(Console.ReadLine());
+        }
+
+        private static void Operations(int numberOperation)
+        {
+            switch (numberOperation)
+            {
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    break;
+
+                default:
+                    Console.WriteLine("Данной операции не существует");
+                    break;
+            }
+        }
+
+        private static void Hello()
+        {
+
         }
     }
 }
