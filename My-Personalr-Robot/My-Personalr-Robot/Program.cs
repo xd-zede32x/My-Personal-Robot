@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace My_Personal_Robot
+namespace MyPersonalRobot
 {
     public class Program
     {
@@ -26,13 +26,11 @@ namespace My_Personal_Robot
             InputUserOperation(userName);
         }
 
-        private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
-
         private static void InputUserOperation(string userName)
         {
-            Console.WriteLine($"{userName} выберете операцию которую хотите использовать: ");
+            Console.Write($"\n{userName} выберете операцию которую хотите использовать: ");
             
-            int inputOperations = Convert.ToInt32(Console.ReadLine());
+            int userInputOperations = Convert.ToInt32(Console.ReadLine());
         }
 
         private static void Operations(int numberOperation)
@@ -57,9 +55,6 @@ namespace My_Personal_Robot
             }
         }
 
-        private static void Hello()
-        {
-
-        }
+        private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
     }
 }
