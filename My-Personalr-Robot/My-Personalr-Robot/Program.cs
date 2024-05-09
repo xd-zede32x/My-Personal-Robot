@@ -4,7 +4,16 @@ namespace MyPersonalRobot
 {
     public class Program
     {
-        private static void Main(string[] _) => UserGreeting();
+        private static string _userName;
+
+        private static void Main(string[] _)
+        {
+            UserGreeting();
+            PrintUserOperation();
+            InputUserOperation();
+
+            Console.ReadKey();
+        }
 
         private static void UserGreeting()
         {
@@ -20,16 +29,14 @@ namespace MyPersonalRobot
 
         private static void EnteringUserName()
         {
-            string userName = Console.ReadLine();
-            Console.WriteLine($"\nХорошо я буду вас называть {userName} если вы не против (-- --)");
-
-            InputUserOperation(userName);
+            _userName = Console.ReadLine();
+            Console.WriteLine($"\nХорошо я буду вас называть {_userName} если вы не против (-- --)");
         }
 
-        private static void InputUserOperation(string userName)
+        private static void InputUserOperation()
         {
-            Console.Write($"\n{userName} выберете операцию которую хотите использовать: ");
-            
+            Console.Write($"\n{_userName} выберете операцию которую хотите использовать: ");
+
             int userInputOperations = Convert.ToInt32(Console.ReadLine());
         }
 
@@ -39,6 +46,7 @@ namespace MyPersonalRobot
             {
                 case 1:
                     break;
+
 
                 case 2:
                     break;
@@ -50,9 +58,14 @@ namespace MyPersonalRobot
                     break;
 
                 default:
-                    Console.WriteLine("Данной операции не существует");
+                    Console.WriteLine("Данной операции не существует (--╳--)");
                     break;
             }
+        }
+
+        private static void PrintUserOperation()
+        {
+            Console.WriteLine($"\nВсе возможные операции:\n\n1 - (Калькулятор (-- --)\n2 - (Обмен Валют (-- --)\n3 - (Рассказать шутку (-- --)\n4 - (Покрасить консоль в другой цвет (-- --)");
         }
 
         private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
