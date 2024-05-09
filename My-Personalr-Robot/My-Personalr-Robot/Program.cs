@@ -5,12 +5,14 @@ namespace MyPersonalRobot
     public class Program
     {
         private static string _userName;
+        private static int _userInputOperations;
 
         private static void Main(string[] _)
         {
             UserGreeting();
             PrintUserOperation();
             InputUserOperation();
+            Operations();
 
             Console.ReadKey();
         }
@@ -37,28 +39,31 @@ namespace MyPersonalRobot
         {
             Console.Write($"\n{_userName} выберете операцию которую хотите использовать: ");
 
-            int userInputOperations = Convert.ToInt32(Console.ReadLine());
+            _userInputOperations = Convert.ToInt32(Console.ReadLine());
         }
 
-        private static void Operations(int numberOperation)
+        private static void Operations()
         {
-            switch (numberOperation)
+            switch (_userInputOperations)
             {
                 case 1:
+                    Console.WriteLine("\nВы выбрали первую программу.");
                     break;
 
-
                 case 2:
+                    Console.WriteLine("\nВы выбрали вторую программу.");
                     break;
 
                 case 3:
+                    Console.WriteLine("\nВы выбрали третью программу.");
                     break;
 
                 case 4:
+                    Console.WriteLine("\nВы выбрали четвертою программу.");
                     break;
 
                 default:
-                    Console.WriteLine("Данной операции не существует (--╳--)");
+                    Console.WriteLine("\nДанной операции не существует (--╳--) Выйдите из программы!!!");
                     break;
             }
         }
