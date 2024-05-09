@@ -29,10 +29,17 @@ namespace MyPersonalRobot
             EnteringUserName();
         }
 
+        private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
+
         private static void EnteringUserName()
         {
             _userName = Console.ReadLine();
             Console.WriteLine($"\nХорошо я буду вас называть {_userName} если вы не против (-- --)");
+        }
+
+        private static void PrintUserOperation()
+        {
+            Console.WriteLine($"\nВсе возможные операции:\n\n1 - (Калькулятор (-- --)\n2 - (Обмен Валют (-- --)\n3 - (Рассказать шутку (-- --)\n4 - (Покрасить консоль в другой цвет (-- --)");
         }
 
         private static void InputUserOperation()
@@ -47,19 +54,21 @@ namespace MyPersonalRobot
             switch (_userInputOperations)
             {
                 case 1:
-                    Console.WriteLine("\nВы выбрали первую программу.");
+                    Console.WriteLine();
+
+                    Calculator calculator = new Calculator();
                     break;
 
                 case 2:
-                    Console.WriteLine("\nВы выбрали вторую программу.");
+
                     break;
 
                 case 3:
-                    Console.WriteLine("\nВы выбрали третью программу.");
+
                     break;
 
                 case 4:
-                    Console.WriteLine("\nВы выбрали четвертою программу.");
+
                     break;
 
                 default:
@@ -67,12 +76,5 @@ namespace MyPersonalRobot
                     break;
             }
         }
-
-        private static void PrintUserOperation()
-        {
-            Console.WriteLine($"\nВсе возможные операции:\n\n1 - (Калькулятор (-- --)\n2 - (Обмен Валют (-- --)\n3 - (Рассказать шутку (-- --)\n4 - (Покрасить консоль в другой цвет (-- --)");
-        }
-
-        private static void ChangeConsoleColor(ConsoleColor color) => Console.ForegroundColor = color;
     }
 }
