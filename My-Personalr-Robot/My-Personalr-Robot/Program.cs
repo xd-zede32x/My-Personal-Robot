@@ -36,12 +36,12 @@ namespace MyPersonalRobot
         private static void EnteringUserName()
         {
             UserName = Console.ReadLine();
-            Console.WriteLine($"\nХорошо я буду вас называть {UserName} если вы не против (-- --)");
+            Console.WriteLine($"\nХорошо я буду вас называть {UserName} если вы не против (--_--)");
         }
 
         private static void PrintUserOperation()
         {
-            Console.WriteLine($"\nВсе возможные операции:\n\n1 - (Калькулятор (-- --)\n2 - (Обмен Валют (-- --)\n3 - (Рассказать шутку (-- --)\n4 - (Покрасить консоль в другой цвет (-- --)");
+            Console.WriteLine($"\nВсе возможные операции:\n\n1 - (Калькулятор (--_--)\n2 - (Обмен Валют (-- --)\n3 - (Рассказать шутку (-- --)\n4 - (Покрасить консоль в другой цвет (-- --)");
         }
 
         private static void InputUserOperation()
@@ -57,6 +57,7 @@ namespace MyPersonalRobot
             {
                 case 1:
                     Calculator calculator = new Calculator();
+                    calculator.Start();
                     break;
 
                 case 2:
