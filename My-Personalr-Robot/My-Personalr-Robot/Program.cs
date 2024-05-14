@@ -4,8 +4,8 @@ namespace MyPersonalRobot
 {
     public class Program
     {
-        public static string UserName { get; set; }
-        public static int UserInputOperations { get; set; }
+        private static string _userName;
+        private static int _userInputOperations;
 
         private static void Main(string[] _) => Start();
 
@@ -35,8 +35,8 @@ namespace MyPersonalRobot
 
         private static void EnteringUserName()
         {
-            UserName = Console.ReadLine();
-            Console.WriteLine($"\nХорошо я буду вас называть {UserName} если вы не против (--_--)");
+            _userName = Console.ReadLine();
+            Console.WriteLine($"\nХорошо я буду вас называть {_userName} если вы не против (--_--)");
         }
 
         private static void PrintUserOperation()
@@ -46,30 +46,31 @@ namespace MyPersonalRobot
 
         private static void InputUserOperation()
         {
-            Console.Write($"\n{UserName} выберете операцию которую хотите использовать: ");
+            Console.Write($"\n{_userName} выберете операцию которую хотите использовать: ");
 
-            UserInputOperations = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out _userInputOperations) || !Enum.IsDefined(typeof(Operation), _userInputOperations))
+            {
+                Console.WriteLine("Некорректный ввод.Пожалуйста, выберите одну из операций (--_--)");
+                Console.Write("Ваш выбор: ");
+            }
         }
 
         private static void Operations()
         {
-            switch (UserInputOperations)
+            switch ((Operation)_userInputOperations)
             {
-                case 1:
+                case Operation.Calculator:
                     Calculator calculator = new Calculator();
                     calculator.Start();
                     break;
 
-                case 2:
-
+                case Operation.CurrencyExchange:
                     break;
 
-                case 3:
-
+                case Operation.TellJoke:
                     break;
 
-                case 4:
-
+                case Operation.ChangeConsoleColor:
                     break;
 
                 default:
