@@ -4,10 +4,12 @@ namespace MyPersonalRobot
 {
     public class Program
     {
-        private static string _userName;
-        private static int _userInputOperations;
+        public static string UserName { get; set; }
+        public static int UserInputOperations { get; set; }
 
-        private static void Main(string[] _)
+        private static void Main(string[] _) => Start();
+
+        private static void Start()
         {
             UserGreeting();
             PrintUserOperation();
@@ -33,8 +35,8 @@ namespace MyPersonalRobot
 
         private static void EnteringUserName()
         {
-            _userName = Console.ReadLine();
-            Console.WriteLine($"\nХорошо я буду вас называть {_userName} если вы не против (-- --)");
+            UserName = Console.ReadLine();
+            Console.WriteLine($"\nХорошо я буду вас называть {UserName} если вы не против (-- --)");
         }
 
         private static void PrintUserOperation()
@@ -44,18 +46,16 @@ namespace MyPersonalRobot
 
         private static void InputUserOperation()
         {
-            Console.Write($"\n{_userName} выберете операцию которую хотите использовать: ");
+            Console.Write($"\n{UserName} выберете операцию которую хотите использовать: ");
 
-            _userInputOperations = Convert.ToInt32(Console.ReadLine());
+            UserInputOperations = Convert.ToInt32(Console.ReadLine());
         }
 
         private static void Operations()
         {
-            switch (_userInputOperations)
+            switch (UserInputOperations)
             {
                 case 1:
-                    Console.WriteLine();
-
                     Calculator calculator = new Calculator();
                     break;
 
