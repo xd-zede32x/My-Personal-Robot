@@ -5,7 +5,6 @@ namespace MyPersonalRobot
     public class Program
     {
         private static string _userName;
-        private static int _userInputOperations;
 
         private static void Main(string[] _) => Start();
 
@@ -14,7 +13,6 @@ namespace MyPersonalRobot
             UserGreeting();
             PrintUserOperation();
             InputUserOperation();
-            Operations();
 
             Console.ReadKey();
         }
@@ -46,18 +44,17 @@ namespace MyPersonalRobot
 
         private static void InputUserOperation()
         {
+            int userInputOperations;
+
             Console.Write($"\n{_userName} выберете операцию которую хотите использовать: ");
 
-            while (!int.TryParse(Console.ReadLine(), out _userInputOperations) || !Enum.IsDefined(typeof(Operation), _userInputOperations))
+            while (!int.TryParse(Console.ReadLine(), out userInputOperations) || !Enum.IsDefined(typeof(Operation), userInputOperations))
             {
-                Console.WriteLine("Некорректный ввод.Пожалуйста, выберите одну из операций (--_--)");
-                Console.Write("Ваш выбор: ");
+                Console.WriteLine("\nНекорректный ввод.Пожалуйста, выберите одну из операций (--_--)");
+                Console.Write("\nВаш выбор: ");
             }
-        }
 
-        private static void Operations()
-        {
-            switch ((Operation)_userInputOperations)
+            switch ((Operation)userInputOperations)
             {
                 case Operation.Calculator:
                     Calculator calculator = new Calculator();
