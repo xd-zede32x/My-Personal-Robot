@@ -54,6 +54,11 @@ namespace MyPersonalRobot
                 Console.Write("\nВаш выбор: ");
             }
 
+            Operations(userInputOperations);
+        }
+
+        private static void Operations(int userInputOperations)
+        {
             switch ((Operation)userInputOperations)
             {
                 case Operation.Calculator:
