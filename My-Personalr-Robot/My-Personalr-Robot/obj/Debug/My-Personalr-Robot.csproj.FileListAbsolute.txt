@@ -5,3 +5,10 @@ C:\Users\Роман\Desktop\Learning\GitHub Desktop\My-Personalr-Robot\My-Person
 C:\Users\Роман\Desktop\Learning\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.csproj.CoreCompileInputs.cache
 C:\Users\Роман\Desktop\Learning\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.exe
 C:\Users\Роман\Desktop\Learning\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.pdb
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\bin\Debug\My-Personalr-Robot.exe.config
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\bin\Debug\My-Personalr-Robot.exe
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\bin\Debug\My-Personalr-Robot.pdb
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.csproj.AssemblyReference.cache
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.csproj.CoreCompileInputs.cache
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.exe
+C:\Users\Роман\Desktop\Main\GitHub Desktop\My-Personalr-Robot\My-Personalr-Robot\My-Personalr-Robot\obj\Debug\My-Personalr-Robot.pdb

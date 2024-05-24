@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeginningProgram.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Program.cs" />

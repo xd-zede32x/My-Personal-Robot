@@ -40,6 +40,8 @@ namespace MyPersonalRobot
             Console.WriteLine("Список возможных операций (--_--)");
 
             Console.WriteLine("\n\n\t+ | - | * | /");
+
+
         }
     }
 }
